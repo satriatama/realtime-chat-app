@@ -1,6 +1,5 @@
 import WelcomeCarousel from "@/components/welcome/welcome-carousel";
 import WelcomeFooter from "@/components/welcome/welcome-footer";
-import Image from "next/image";
 
 export default function Home() {
   return (

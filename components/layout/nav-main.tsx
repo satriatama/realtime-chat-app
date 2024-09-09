@@ -1,5 +1,5 @@
 'use client'
-import { Box, ChevronRight, GroupIcon, Home, LucidePersonStanding, PersonStandingIcon, Scroll } from 'lucide-react'
+import { ChevronRight, GroupIcon, LucidePersonStanding } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'

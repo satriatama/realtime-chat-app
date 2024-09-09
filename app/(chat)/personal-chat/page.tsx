@@ -1,22 +1,11 @@
 'use client'
 import { ChatAvatar } from '@/components/personal/chat-avatar'
 import { PersonalChatPage } from '@/components/personal/chat-page'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
-import { get } from 'http'
-import { CalendarDays, DotIcon, Icon, RedoDotIcon, StarHalfIcon } from 'lucide-react'
 import React from 'react'
 
 
-const page = () => {
-  const dataAvatar = [
-    {
-      user: 'satria',
-      id: 1
-    }
-  ]  
-  const [id, setId] = React.useState(0)
+const Page = () => {
+const [id, setId] = React.useState(0)
 
   function handler(newId: number) {
     console.log(newId)
@@ -24,41 +13,41 @@ const page = () => {
   }
 
   function getChatData(id: number): PersonalChatPageProps{
-    return dummyDataArr.find((item :any) => item.idChat === id)
+    return DummyDataArr.find((item :any) => item.idChat === id)
   }
 
-  const dummyData: any =
-  {
-    idChat: 1,
-    user: 'Florencio Dorrance',
-    date: '2021-09-15',
-    time: '12:00',
-    dataChat: [
-      {
-        user: 'Florencio Dorrance',
-        data: [
-          { message: 'How are you asddasasd?' },
-          { message: 'I\'ll be there in 2 mins 🕒' }
-        ]
-      },
-      {
-        user: 'Satria Tama',
-        data: [
-          { message: 'just ideas for next time lorem' },
-          { message: 'woohoooo' }
-        ]
-      },
-      {
-        user: 'Florencio Dorrance',
-        data: [
-          { message: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' },
-          { message: 'I\'ll be there in 2 mins 🕒' }
-        ]
-      }
-    ]
-  }
+  // const DummyData: any =
+  // {
+  //   idChat: 1,
+  //   user: 'Florencio Dorrance',
+  //   date: '2021-09-15',
+  //   time: '12:00',
+  //   dataChat: [
+  //     {
+  //       user: 'Florencio Dorrance',
+  //       data: [
+  //         { message: 'How are you asddasasd?' },
+  //         { message: 'I\'ll be there in 2 mins 🕒' }
+  //       ]
+  //     },
+  //     {
+  //       user: 'Satria Tama',
+  //       data: [
+  //         { message: 'just ideas for next time lorem' },
+  //         { message: 'woohoooo' }
+  //       ]
+  //     },
+  //     {
+  //       user: 'Florencio Dorrance',
+  //       data: [
+  //         { message: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' },
+  //         { message: 'I\'ll be there in 2 mins 🕒' }
+  //       ]
+  //     }
+  //   ]
+  // }
 
-  const dummyDataArr: any = [
+  const DummyDataArr: any = [
     {
       idChat: 1,
       user: 'Florencio Dorrance',
@@ -181,7 +170,6 @@ const page = () => {
     ]
   }
 
-  const lastMessage = dummyData.dataChat[0].data[1].message
   return (
     id !== 0 ? (
     <div className='flex ms-1 h-screen'>
@@ -210,4 +198,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
