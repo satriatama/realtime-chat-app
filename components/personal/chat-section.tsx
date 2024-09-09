@@ -11,7 +11,7 @@ export const ChatSection = (
         <div className="flex items-start space-x-2">
         <Avatar>
             <AvatarImage src="/placeholder-user.jpg" alt="User" />
-            <AvatarFallback>FD</AvatarFallback>
+            <AvatarFallback>{user.charAt(0).toUpperCase()}</AvatarFallback>
         </Avatar>
             <ChatItem data={data} isLeft={isLeft} />
         </div>
@@ -20,7 +20,7 @@ export const ChatSection = (
             <ChatItem data={data} isLeft={isLeft} />
             <Avatar>
             <AvatarImage src="/placeholder-user.jpg" alt="User" />
-            <AvatarFallback>FD</AvatarFallback>
+            <AvatarFallback>{user.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
         </div>
         )

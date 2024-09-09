@@ -10,83 +10,23 @@ import { ArrowDownToDotIcon } from "lucide-react"
 import { JSX, SVGProps } from "react"
 import { ChatSection } from "./chat-section"
 
-const getDataChat = () => {
-  return [
-    {
-      user: 'Florencio Dorrance',
-      data: [
-        {
-          message: 'How are you?'
-        },
-        {
-          message: 'I\'ll be there in 2 mins 🕒'
-        }
-      ]
-    },
-    {
-      user: 'Satria Tama',
-      data: [
-        {
-          message: 'just ideas for next time lorem'
-        },
-        {
-          message: 'woohoooo'
-        },
-      ]
-    },
-    {
-      user: 'Florencio Dorrance',
-      data: [
-        {
-          message: 'How are you?'
-        },
-        {
-          message: 'I\'ll be there in 2 mins 🕒'
-        }
-      ]
-    },
-    {
-      user : 'Satria Tama',
-      data: [
-        {
-          message: 'just ideas for next time lorem'
-        },
-        {
-          message: 'woohoooo'
-        },
-      ]
-    },
-    {
-      user : 'Florencio Dorrance',
-      data: [
-        {
-          message: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nesciunt amet molestiae aperiam eum. Dolor magnam velit reiciendis, quibusdam nesciunt vitae magni eveniet excepturi, facilis soluta ex deserunt laborum illo?'
-        },
-        {
-          message: 'I\'ll be there in 2 mins 🕒'
-        }
-      ]
-    },
-  ];
-};
 
 function isLeft(user: string) : boolean{
   return user === 'Florencio Dorrance'
 }
 
 
-export function PersonalChatPage() {
-  const data = getDataChat()
+export function PersonalChatPage({ idChat, user, dataChat }: PersonalChatPageProps) {
   return (
     <div className="flex flex-col w-full bg-gray-300 border rounded-2xl m-2">
       <header className="flex items-center justify-between p-4 bg-white border-b  rounded-2xl">
         <div className="flex items-center space-x-4">
           <Avatar>
             <AvatarImage src="/placeholder-user.jpg" alt="User" />
-            <AvatarFallback>FD</AvatarFallback>
+            <AvatarFallback>{user.charAt(0).toUpperCase()}</AvatarFallback>
           </Avatar>
           <div>
-            <h2 className="text-lg font-semibold">Florencio Dorrance</h2>
+            <h2 className="text-lg font-semibold">{user}</h2>
             <div className="flex items-center space-x-2 text-sm text-green-500">
               <span className="h-2 w-2 bg-green-500 rounded-full" />
               <span>Online</span>
@@ -100,7 +40,7 @@ export function PersonalChatPage() {
       </header>
       <main className="flex-1 p-4 overflow-y-auto scrollbar-hide">
         <div className="space-y-4">
-          {getDataChat().map((item, index) => (
+          {dataChat.map((item, index) => (
             <ChatSection key={index} user={item.user} isLeft={isLeft(item.user)} data={item.data} />
           ))}
         </div>
