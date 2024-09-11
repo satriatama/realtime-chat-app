@@ -16,37 +16,6 @@ const [id, setId] = React.useState(0)
     return DummyDataArr.find((item :any) => item.idChat === id)
   }
 
-  // const DummyData: any =
-  // {
-  //   idChat: 1,
-  //   user: 'Florencio Dorrance',
-  //   date: '2021-09-15',
-  //   time: '12:00',
-  //   dataChat: [
-  //     {
-  //       user: 'Florencio Dorrance',
-  //       data: [
-  //         { message: 'How are you asddasasd?' },
-  //         { message: 'I\'ll be there in 2 mins 🕒' }
-  //       ]
-  //     },
-  //     {
-  //       user: 'Satria Tama',
-  //       data: [
-  //         { message: 'just ideas for next time lorem' },
-  //         { message: 'woohoooo' }
-  //       ]
-  //     },
-  //     {
-  //       user: 'Florencio Dorrance',
-  //       data: [
-  //         { message: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.' },
-  //         { message: 'I\'ll be there in 2 mins 🕒' }
-  //       ]
-  //     }
-  //   ]
-  // }
-
   const DummyDataArr: any = [
     {
       idChat: 1,
