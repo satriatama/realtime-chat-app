@@ -48,3 +48,19 @@ declare type ChatItemProps = {
     onClick: (id: number) => void
     data: ChatAvatarPropsAl[];
   }
+
+  
+declare type User = {
+  id: number;
+  username: string;
+  shortname: string;
+  image: string;
+  created_at: string;
+  updated_at: string;
+}
+
+declare type UserApi = {
+status: string,
+message: string,
+data: User[]
+}
